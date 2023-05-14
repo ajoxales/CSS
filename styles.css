@@ -1,0 +1,168 @@
+* {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.text {
+    max-width: 920px;
+    margin: auto;
+}   
+
+#cssmodel {
+    width: 700px;
+    border-radius: 10px;
+}
+
+.codedemo {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    padding: 10px;
+    width: 230px;
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+p .one {
+        border-style: solid;
+        border-width: 5px;
+}
+
+section div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid lightblue;
+    margin: auto;
+}
+
+#paddingedgediv {
+    padding: 70px;
+    border: 3px solid #6db6c8;
+}
+
+#diffpadding {
+    padding: 70px 10px 43px 0px; 
+    border: 3px solid #ce951b;
+}
+
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+
+p.one {
+    border-style: solid;
+    border-width: 5px;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+#marginedge section p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(109, 109, 109);
+}
+
+#marginedge section {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ce951b;
+}
+
+#overflow div {
+    background-color: rgb(118, 184, 208);
+    width: 200px;
+    height: 65px;
+    border: 1px solid;
+    overflow: visible;
+}
+
+#overflow div#hidden {
+    background-color: rgb(118, 184, 208);
+    width: 200px;
+    height: 65px;
+    border: 1px solid;
+    overflow: hidden;
+}
+
+#overflow div#scroll {
+    background-color: rgb(118, 184, 208);
+    width: 200px;
+    height: 65px;
+    border: 1px solid;
+    overflow: scroll;
+}
+
+#overflow div#auto {
+    background-color: rgb(118, 184, 208);
+    width: 200px;
+    height: 65px;
+    border: 1px solid;
+    overflow: auto;
+}
+
+section#layout h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size:40px;
+}
+
+div.static {
+    position: static;
+    border: 3px solid #73AD21;
+    /*not affected by top, right, bottom, left*/
+    top: 100px;
+    right: 200px;
+}
+
+div.relative {
+    position: relative;
+    left: 200px;
+    top: 20px;
+    border: 3px solid #73AD21;
+}
+
+div.relative1 {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+}
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: -10px;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+
+div.sticky {
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+}
+
+div.fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        border: 3px solid #73AD21;
+}
+
+

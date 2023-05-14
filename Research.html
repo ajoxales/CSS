@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+</head>
+<body>
+    <header><h1>The CSS Box Model</h1></header>
+
+    <hr>
+
+     <br>
+    <section>
+        <p class="text">In CSS, the term <strong>"box model"</strong> is used when talking about design and layout.</p><br>
+        <p class="text">The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:</p>
+    </section>
+
+    <br>
+
+    <img id="cssmodel" src="https://media.gcflearnfree.org/content/5ef2084faaf0ac46dc9c10be_06_23_2020/box_model.png" alt="CSS Box model"><br><br>
+
+    <section>
+        <p class="text">
+           <strong>Content</strong> - The content of the box, where text and images appear <br>
+           <strong>Padding</strong> - Clears an area around the content. The padding is transparent <br>
+           <strong>Border</strong> - A border that goes around the padding and content <br>
+           <strong>Margin</strong> - Clears an area outside the border. The margin is transparent <br><br>
+            The box model allows us to add a border around elements, and to define space between elements. 
+        </p>
+    </section>
+    <section>
+        <p class="text">The creation of an html box in fact starts with the creation of an HTML element. This element can be a <strong>div, p elements, a</strong> elements or any other element. In short all elements can be used to create the desired HTML box. In the following example we make use of the div element because this is most commonly used:</p>
+        <br>
+        <section class="box">
+            <p class="text">&lt;div class="box"&gt;&lt;/div&gt;</p>
+        </section> 
+    </section>
+    
+    <br>
+
+    <section>
+        <p class="text"><strong>Box Model Demonstration</strong></p><br>
+        <p class="text">
+            <p class="codedemo">
+                div { <br>
+                    width: 300px; <br>
+                    order: 15px solid green; <br>
+                    padding: 50px; <br>
+                    margin: 20px; <br>
+                    } <br>
+            </p>
+        </p>
+    </section><br>
+
+    <hr>
+
+    <!--CONTENT-->
+    <section>
+        <h2>Content edge or inner edge</h2>
+        <p class="text">The content edge surrounds the rectangle given by the <strong>width</strong> and <strong>height</strong> of the box, which often depend on the element's rendered content. The four content edges define the box's content box.</p>
+        <p class="text">When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.</p><br>
+    
+        <section>
+            <p class="text">
+                <p class="codedemo">
+                    div { <br>
+                        width: 320px; <br>
+                        padding: 10px; <br>
+                        border: 5px solid gray; <br>
+                        margin: 0; <br>
+                      } <br>
+                </p>
+        </section>
+        <div>
+            <p>Content</p>
+        </div>
+    </section> <br>
+    
+    <hr>
+    
+    <!--PADDING-->
+    <section id="paddingedge">
+        <h2>Padding edge</h2>
+        <p class="text">The padding edge surrounds the box padding. If the padding has 0 width, the padding edge is the same as the content edge. The four padding edges define the box's padding box.</p>
+    
+        <section>
+            <p class="text">
+                <p class="codedemo">
+                    div { <br>
+                        padding: 70px; <br>
+                        border: 1px solid #6db6c8; <br>
+                    } <br>
+                </p>
+            </p>
+        </section>
+        <section>
+            <div id="paddingedgediv">
+                <p>This element has a padding of 70px.</p>
+              </div>
+        </section>
+        <p>The CSS padding properties are used to generate space around an element's content, inside of any defined borders.</p>
+        <p>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+    
+      <section>
+        <p class="text">
+            <p class="codedemo">
+                div { <br>
+                    padding: 70px 10px 15px 0px; <br>
+                    border: 1px solid #4CAF50; <br>
+                    } <br>
+            </p>
+        </p>
+
+            <div id="diffpadding">
+                <p>This element has different padding sizes</p>
+            </div>
+        </section>
+    </section>
+
+    <hr>
+
+    <!--BORDER-->
+    <section id="borderedge">
+        <h2><strong>Border Edge</strong></h2>
+        <p class="text"> The CSS border properties allow you to specify the style, width, and color of an element's border. The border edge surrounds the box's border. If the border has 0 width, the border edge is the same as the padding edge. The four border edges define the box's border box.</p>
+        <br>
+        <h3>Border Styles</h3>
+        <p class="text">
+            <p class="codedemo">
+                p.dotted {border-style: dotted;} <br>
+                p.dashed {border-style: dashed;} <br>
+                p.solid {border-style: solid;} <br>
+            </p>
+        </p>
+
+        <section class="text">
+            <p class="dotted">A dotted border.</p>
+            <p class="dashed">A dashed border.</p>
+            <p class="solid">A solid border.</p>
+        </section>
+
+        <br>
+        <h3>Border Width</h3>
+        <p class="text">The border-width property specifies the width of the four borders. The width can be set as a <strong>specific size (in px, pt, cm, em, etc)</strong> or by using one of the three pre-defined values: thin, medium, or thick:</p> <br>
+        <p class="text">
+            <p class="codedemo">
+                p.one {
+                    border-style: solid;
+                    border-width: 5px;
+                    }
+            </p>
+        </p>
+        <section class="text">
+            <p class="one">Some text.</p>
+        </section>
+
+        <p>The <strong>&lt;border-radius&gt;</strong> property is used to add rounded borders to an element:</p>
+        <p>The <strong>&lt;border-color&gt;</strong> property is used to set the color of the four borders.</p>
+        <p>
+            The color can be set by: <br>
+            <ul>
+                <li>name - specify a color name, like "red"</li>
+                <li>name - specify a color name, like "red"</li>
+                <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+                <li>HSL - specify a HSL value, like "hsl(0, 100%, 50%)"</li>
+                <li>transparent</li>
+            </ul>
+        </p>
+        <p class="text">The <strong>&lt;border-style&gt;</strong> propety may take one of the following values <strong>none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</strong>.</p>
+        <br>    
+    </section>
+
+    <hr>
+
+    <!--MARGIN-->
+    <section id="marginedge">
+        <h2>Margin Edge</h2>
+        <p class="text">Margins are used to create space around elements, outside of any defined borders. <br> With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
+        <p class="text">CSS has properties for specifying the margin for each side of an element:
+            <ul>
+                <li>margin-top</li>
+                <li>margin-right</li>
+                <li>margin-bottom</li>
+                <li>margin-left</li>
+            </ul>
+        </p>
+        
+        <p class="text">
+           <p class="codedemo">
+                p.one {
+                    border-style: solid;
+                    border-width: 5px;
+                    }
+           </p>
+        </p>
+        <section id="margindemo">
+            Margin
+            <p class="text"> This is some content</p>
+        </section>
+
+        <h3>Auto value</h3>
+        <p class="text">You can set the margin property to auto to horizontally center the element within its container. The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.</p>
+
+        <h3>Inherit value</h3>
+        <p class="text">Inherit value lets the element inherit the margin properties of its parent element</p>
+    </section><br>
+
+    <hr>
+
+    <section id="overflow">
+        <h2>CSS Overflow</h2>
+        <p class="text">The CSS overflow property controls what happens to content that is too big to fit into an area.</p>
+        <p>The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+        <br>The overflow property has the following values:</p>
+        <ul>
+            <li><strong>visible</strong> - Default. The overflow is not clipped. The content renders outside the element's box</li>
+            <li><strong>hidden</strong> - The overflow is clipped, and the rest of the content will be invisible/li>
+            <li><strong>scroll</strong> - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+            <li><strong>auto</strong> - Similar to scroll, but it adds scrollbars only when necessary</li>
+        </ul>
+
+        <h3>overflow: visible</h3>
+        <p class="text">By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+        <p class="text">
+            <p class="codedemo">
+                div { <br>
+                    width: 200px; <br>
+                    height: 65px; <br>
+                    background-color: coral; <br>
+                    overflow: visible; <br>
+                  } <br>
+            </p>
+        </p>
+        <div class="text">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+
+        <br><br><br><br>
+
+        <h3>overflow: hidden</h3>
+        <p class="text">With the hidden value, the overflow is clipped, and the rest of the content is hidden:</p>
+        <p class="text">
+            <p class="codedemo">
+                div { <br>
+                    width: 200px; <br>
+                    height: 65px; <br>
+                    background-color: coral; <br>
+                    overflow: hidden; <br>
+                  } <br>
+            </p>
+        </p>
+        <div class="text" id="hidden">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+
+        <br><br>
+
+        <h3>overflow: scroll</h3>
+        <p class="text">Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+        <p class="text">
+           <p class="codedemo">
+            div { <br>
+                width: 200px; <br>
+                height: 65px; <br>
+                background-color: coral; <br>
+                overflow: scroll; <br>
+              } <br>
+           </p>
+        </p>
+        <div class="text" id="scroll">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+
+        <br><br>
+
+        <h3>overflow: auto</h3>
+        <p class="text">Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+        <p class="text">
+            <p class="codedemo">
+                div { <br>
+                    width: 200px; <br>
+                    height: 65px; <br>
+                    background-color: coral; <br>
+                    overflow: auto; <br>
+                  } <br>
+            </p>
+        </p>
+        <div class="text" id="auto">
+            You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+        </div>
+    </section>
+    <br>
+
+    <hr>
+
+    <!--LAYOUT PROPERTIES-->
+    <section id="layout">
+        <h1>CSS Layout Properties</h1>
+        <p class="text">CSS (Cascading Style Sheets) provides a variety of layout properties that allow you to control the positioning and arrangement of elements on a web page.</p>
+    </section>
+    <hr><br>
+
+    <section id="position">
+        <h2 class="text">Position Property</h2><br>
+        <p class="text">The <strong>position</strong> property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
+        <p class="text">There are five different position values:</p>
+        <p class="text">
+            <ul>
+                <li>static</li>
+                <li>relative</li>
+                <li>fixed</li>
+                <li>absolute</li>
+                <li>sticky</li>
+            </ul>
+        </p>
+
+        <br>   
+
+        <!--STATIC-->
+        <h3>position: static;</h3>
+        <p class="text">Static positioned elements are not affected by the top, bottom, left, and right properties. An element with <strong>position: static;</strong> is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+        <p class="text">
+           <p class="codedemo">
+                div.static { <br>
+                    position: static; <br>
+                    border: 3px solid #73AD21; <br>
+                } <br>
+           </p>
+        </p>
+        <section>
+            <div class="static">
+                <p>This &lt;div&gt; element has position: static;</p>
+            </div>
+        </section>
+
+        <!--RELATIVE-->
+        <h3>position: relative;</h3>
+        <p class="text">An element with position: relative; is positioned relative to its normal position. Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+        <p class="text">
+            <p class="codedemo">
+                div.relative { <br>
+                    position: relative; <br>
+                    left: 30px; <br>
+                    border: 3px solid #73AD21; <br>
+                  } <br>
+            </p>
+        </p>
+        <section>
+            <div class="relative">
+                <p>This &lt;div&gt; element has position: relative;</p>
+            </div>
+        </section>
+
+        <!--ABSOLUTE-->
+        <h3>position: absolute;</h3>
+        <p class="text">An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.</p>
+        <p class="text">
+            <p class="codedemo">
+                div.relative { <br> 
+                    position: relative; <br>
+                    width: 400px; <br>
+                    height: 200px; <br>
+                    border: 3px solid #73AD21; <br>
+                  } <br>
+
+                div.absolute { <br>
+                    position: absolute; <br>
+                    right: 0; <br>
+                    width: 200px; <br>
+                    height: 100px; <br>
+                    border: 3px solid #73AD21; <br>
+                  } <br>
+            </p>
+        </p>
+        <section>
+           <div class="relative1">
+                <p>This &lt;div&gt; element has position: relative;</p>
+                <div class="absolute">
+                    <p>This &lt;div&gt; element has position: absolute;</p>
+                </div>
+           </div>
+        </section><br>
+
+        <!--STICKY-->
+        <h3>position: sticky;</h3>
+        <p class="text">An element with position: sticky; is positioned based on the user's scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).</p>
+        <p class="text">
+            <p class="codedemo">
+                div.sticky { <br>  
+                    position: -webkit-sticky; <br>
+                    position: sticky; <br>
+                    top: 0; <br>
+                    background-color: green; <br>
+                    border: 2px solid #4CAF50; <br>
+                } <br>
+            </p> <br>
+        </p>
+        <section>
+            <div class="sticky">
+                <p>This &lt;div&gt; element has position: sticky;</p>
+            </div>
+        </section>
+           
+        <!--FIXED-->
+        <h3>position: fixed;</h3>
+        <p class="text">An element with position: relative; is positioned relative to its normal position. Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+        <p class="text">
+            <p class="codedemo">
+                div.fixed { <br>
+                    position: fixed; <br>
+                    bottom: 0; <br>
+                    right: 0; <br>
+                    width: 300px; <br>
+                    border: 3px solid #73AD21; br
+                  }
+            </p>
+        </p>
+        <section>
+            <div class="fixed">
+                <p>This &lt;div&gt; element has position: fixed;</p>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
